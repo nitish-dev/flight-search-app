@@ -1,0 +1,11 @@
+.show-me {
+    display: block;
+}
+
+.hide-me {
+    display: none;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}

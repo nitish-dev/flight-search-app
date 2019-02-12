@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Search your flight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="font-weight-bold mt-4">Search flights
+            <br>
+            <span class="small text-muted font-weight-light">Fly anywhere. Fly everywhere.</span>
+            </span>
+        </h2>
+        <div id="error"></div>
+        <div class="row mt-4">
+            <div class="col-lg-4 bg-light pt-2 pb-2">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="trip_type" id="oneWays" onclick="hidetripType('returnType')" value="One way"
+                                    checked>
+                                <label class="form-check-label" for="oneWays">
+                                    One way
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="trip_type" id="twoWays" onclick="showtripType('returnType')" value="Two way">
+                                <label class="form-check-label" for="twoWays">
+                                    Round trip
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="flightSearch" class="mt-4">
+                        <div class="form-group">
+                            <label for="originCity">
+                                <strong>Origin City</strong>
+                            </label>
+                            <input type="text" class="form-control" id="originCity" placeholder="Enter Origin City">
+                        </div>
+                        <div class="form-group">
+                            <label for="destinationCity">
+                                <strong>Destination City</strong>
+                            </label>
+                            <input type="text" class="form-control" id="destinationCity" placeholder="Enter Destination City">
+                        </div>
+                        <div class="form-group">
+                            <label for="departureDate">
+                                <strong>Departure Date</strong>
+                            </label>
+                            <input type="date" class="form-control" id="departureDate">
+                        </div>
+                        <div class="form-group" id="returnType" style="display: none;">
+                            <label for="returnDate">
+                                <strong>Return Date</strong>
+                            </label>
+                            <input type="date" class="form-control" id="returnDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers">
+                                <strong>No of passengers</strong>
+                            </label>
+                            <input type="number" class="form-control" id="passengers">
+                        </div>
+                        <button id="btn" class="btn btn-primary btn-block" type="submit">Search flights</button>
+
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-8">
+                <div id="header"></div>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/app.js" type="text/javascript"></script>
+</body>
+
+</html>
